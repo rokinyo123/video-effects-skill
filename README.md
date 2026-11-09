@@ -1,5 +1,7 @@
 # video-effects
 
+**English** | [Azərbaycanca](README_AZ.md)
+
 21 motion-graphics effects for vertical (1080x1920, 30 fps) talking-head footage, built as a Remotion project, plus a Claude skill that knows how to prepare a take, pick effects to match what is said, write the cut list and render it.
 
 The look is light "glass" cards on a grey backdrop with critically damped springs. Several effects cut the speaker out of the room and put graphics behind them; the repo includes the pipeline that makes those cut-outs from a plain take.
