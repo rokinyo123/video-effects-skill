@@ -13,13 +13,13 @@ import { colors } from './theme'
 // SFX: 'hit' at 2 and 28 (the two big banners).
 type Banner = { at: number, tag: string, text: string, y: number, x: number, rot: number, from: -1 | 1, size: number, dark?: boolean, back?: boolean }
 const BANNERS: Banner[] = [
-	{ at: 2, tag: 'BREAKING', text: 'CLAUDE CUT THIS REEL', y: 300, x: 20, rot: -4, from: -1, size: 62 },
-	{ at: 8, tag: 'JUST IN', text: '21 EFFECTS. ZERO KEYFRAMES.', y: 450, x: 230, rot: 3, from: 1, size: 44, back: true },
-	{ at: 14, tag: 'LIVE', text: 'THE TIMELINE IS A PROMPT NOW', y: 640, x: 20, rot: -3, from: -1, size: 42, dark: true, back: true },
-	{ at: 21, tag: 'NEW', text: 'EDITED IN REACT', y: 1170, x: 20, rot: -3, from: -1, size: 56 },
-	{ at: 28, tag: 'BREAKING', text: 'SHIPPED BEFORE LUNCH', y: 1320, x: 130, rot: 4, from: 1, size: 52, dark: true },
-	{ at: 35, tag: 'UPDATE', text: 'ONE PROMPT. ONE REEL.', y: 1510, x: 20, rot: -3, from: -1, size: 54 },
-	{ at: 42, tag: 'JUST IN', text: 'SHIPPED FROM A TERMINAL', y: 1670, x: 210, rot: 3, from: 1, size: 46, dark: true },
+	{ at: 2, tag: 'TƏCİLİ', text: 'BU REEL-İ CLAUDE KƏSDİ', y: 300, x: 20, rot: -4, from: -1, size: 62 },
+	{ at: 8, tag: 'SON DƏQİQƏ', text: '21 EFFEKT. SIFIR KEYFRAME.', y: 450, x: 230, rot: 3, from: 1, size: 44, back: true },
+	{ at: 14, tag: 'CANLI', text: 'TAYMLAYN İNDİ BİR PROMPTDUR', y: 640, x: 20, rot: -3, from: -1, size: 42, dark: true, back: true },
+	{ at: 21, tag: 'YENİ', text: 'REACT-DA MONTAJ EDİLDİ', y: 1170, x: 20, rot: -3, from: -1, size: 56 },
+	{ at: 28, tag: 'TƏCİLİ', text: 'NAHARDAN ƏVVƏL HAZIR', y: 1320, x: 130, rot: 4, from: 1, size: 52, dark: true },
+	{ at: 35, tag: 'YENİLİK', text: 'BİR PROMPT. BİR REEL.', y: 1510, x: 20, rot: -3, from: -1, size: 54 },
+	{ at: 42, tag: 'SON DƏQİQƏ', text: 'TERMİNALDAN GÖNDƏRİLDİ', y: 1670, x: 210, rot: 3, from: 1, size: 46, dark: true },
 ]
 
 // Slam: stiffness 900 (response ≈ 0.21 s), damping ratio 0.8.
@@ -54,6 +54,6 @@ export const HeadlineStorm: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const headlineStormFx: FxEntry = { id: 'headline-storm', name: 'Headline Storm', duration: 75, Component: HeadlineStorm,
+export const headlineStormFx: FxEntry = { id: 'headline-storm', name: 'Başlıq fırtınası', duration: 75, Component: HeadlineStorm,
 	sfx: [{ at: 2, sound: 'hit', volume: 0.3 }, { at: 28, sound: 'hit', volume: 0.25 }],
 }

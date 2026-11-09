@@ -56,8 +56,8 @@ export const BrollOverlay: FC<FxProps> = ({ from }) => {
 			<div style={{ position: 'absolute', left: 12, top: 12, width: WIN.w, height: WIN.h, borderRadius: 24, background: '#fff', border: `1px solid ${colors.navy200}`, overflow: 'hidden', boxSizing: 'border-box' }}>
 				<div style={{ position: 'absolute', left: 0, top: 0, right: 0, height: 64, display: 'flex', alignItems: 'center', gap: 12, padding: '0 22px', borderBottom: `1px solid ${colors.navy200}` }}>
 					{[0, 1, 2].map(c => <div key={c} style={{ width: 16, height: 16, borderRadius: 8, background: colors.navy200 }} />)}
-					<div style={{ marginLeft: 18, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 24, color: colors.navy }}>my-reel-v3 <span style={{ color: colors.navy500, fontWeight: 500 }}>· edited by Claude</span></div>
-					<div style={{ marginLeft: 'auto', fontFamily: themeFonts.body, fontWeight: 600, fontSize: 22, color: '#fff', background: colors.navy, borderRadius: 12, padding: '9px 20px' }}>Export</div>
+					<div style={{ marginLeft: 18, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 24, color: colors.navy }}>my-reel-v3 <span style={{ color: colors.navy500, fontWeight: 500 }}>· Claude montaj edib</span></div>
+					<div style={{ marginLeft: 'auto', fontFamily: themeFonts.body, fontWeight: 600, fontSize: 22, color: '#fff', background: colors.navy, borderRadius: 12, padding: '9px 20px' }}>İxrac</div>
 				</div>
 				<div style={{ position: 'absolute', left: 0, right: 0, top: PREVIEW.y - WIN.y, height: PREVIEW.h, background: colors.navy100 }} />
 				{/* Transport bar. */}
@@ -77,7 +77,7 @@ export const BrollOverlay: FC<FxProps> = ({ from }) => {
 			<Label y={TRACK.a1} text="A1" />
 			{/* Empty V2 lane, the talking-head clip and its audio. */}
 			<div style={{ position: 'absolute', left: TL_X, top: TRACK.v2, width: TL_R - TL_X, height: TRACK_H, borderRadius: 12, border: `2px dashed ${colors.navy200}`, boxSizing: 'border-box' }} />
-			<div style={{ position: 'absolute', left: TL_X - 40, top: TRACK.v1, width: TL_R - TL_X + 40, height: TRACK_H, borderRadius: 12, background: colors.blue, display: 'flex', alignItems: 'center', paddingLeft: 60, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 24, color: '#fff', overflow: 'hidden' }}>Talking head · aroll.mp4</div>
+			<div style={{ position: 'absolute', left: TL_X - 40, top: TRACK.v1, width: TL_R - TL_X + 40, height: TRACK_H, borderRadius: 12, background: colors.blue, display: 'flex', alignItems: 'center', paddingLeft: 60, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 24, color: '#fff', overflow: 'hidden' }}>Danışan · aroll.mp4</div>
 			<div style={{ position: 'absolute', left: TL_X - 40, top: TRACK.a1, width: TL_R - TL_X + 40, height: TRACK_H - 10, borderRadius: 12, background: '#ECFDF5', border: `1px solid ${colors.mint}`, display: 'flex', alignItems: 'center', gap: 3, padding: '0 10px', overflow: 'hidden', boxSizing: 'border-box' }}>
 				{BARS.map((b, i) => <div key={i} style={{ width: 4, flexShrink: 0, height: b * 50, borderRadius: 2, background: colors.mintText, opacity: 0.55 }} />)}
 			</div>
@@ -92,9 +92,9 @@ export const BrollOverlay: FC<FxProps> = ({ from }) => {
 			{/* B-roll overlay: a dark command card over the lower half of the shot once the playhead is inside the clip. */}
 			{brollIn > 0 && <div style={{ position: 'absolute', left: 60, right: 60, top: 1060, height: 660, borderRadius: 48, background: CLAUDE_BG, border: '3px solid #393735', boxShadow: '0 60px 120px -40px rgba(0,0,0,0.6)', transform: `translateY(${(1 - brollIn) * 60}px) scale(${0.96 + 0.04 * brollIn})`, opacity: Math.min(1, brollIn * 1.4), padding: 56, fontFamily: fonts.mono, fontSize: 46, lineHeight: 1.55, whiteSpace: 'nowrap', color: '#F5F3EF', boxSizing: 'border-box' }}>
 				<div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 40, fontFamily: themeFonts.heading, fontSize: 52 }}><AssistantMark size={72} dark style={{ outline: '2px solid #393735' }} />Claude Code</div>
-				<div><span style={{ color: CLAUDE_ORANGE }}>{'> '}</span>add b-roll at 00:12</div>
-				<div style={{ color: colors.mint }}>✓ placed clip on V2</div>
-				<div style={{ color: colors.mint }}>✓ synced to “edit”</div>
+				<div><span style={{ color: CLAUDE_ORANGE }}>{'> '}</span>00:12-də b-roll əlavə et</div>
+				<div style={{ color: colors.mint }}>✓ klip V2-yə qoyuldu</div>
+				<div style={{ color: colors.mint }}>✓ “montaj” sözünə uyğunlaşdı</div>
 			</div>}
 		</div>
 		{/* Playhead over the timeline (drawn last so it crosses the clips). */}
@@ -104,6 +104,6 @@ export const BrollOverlay: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const brollOverlayFx: FxEntry = { id: 'broll-overlay', name: 'B-roll Overlay', duration: 90, Component: BrollOverlay,
+export const brollOverlayFx: FxEntry = { id: 'broll-overlay', name: 'B-roll əlavəsi', duration: 90, Component: BrollOverlay,
 	sfx: [{ at: 0, sound: 'whoosh', volume: 0.4 }, { at: 36, sound: 'click', volume: 0.45 }],
 }

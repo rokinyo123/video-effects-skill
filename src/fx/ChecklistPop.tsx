@@ -11,7 +11,7 @@ import { green, ink, pop, colors } from './theme'
 // and its tick draws on 7 frames later with the same spring. No overshoot.
 // SFX: 'bubble' at 4, 16, 28, 40 (one per pill).
 const DURATION = 72
-const ITEMS = ['Trim', 'Captions', 'Effects', 'Post']
+const ITEMS = ['Kəs', 'Altyazı', 'Effekt', 'Paylaş']
 const START = 4
 const GAP = 12
 const TICK = 7
@@ -48,6 +48,6 @@ export const ChecklistPop: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const checklistPopFx: FxEntry = { id: 'checklist-pop', name: 'Checklist Pop', duration: DURATION, Component: ChecklistPop,
+export const checklistPopFx: FxEntry = { id: 'checklist-pop', name: 'Siyahı kapsulları', duration: DURATION, Component: ChecklistPop,
 	sfx: [4, 16, 28, 40].map(at => ({ at, sound: 'bubble' as const, volume: 0.35 })),
 }

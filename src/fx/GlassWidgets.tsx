@@ -17,11 +17,11 @@ const MUTED = 'rgba(20,20,19,0.55)'
 const GREEN = '#30D158'
 
 const COPY = {
-	count: { value: '21', label: 'effects', sub: 'in one skill' },
-	profile: { name: 'Your name', line: 'Your title',barLabel: 'Face tracked', barValue: '100%' },
-	chart: { title: 'Person mask', value: '1,714', unit: 'frames' },
-	ring: { label: 'Sound synced' },
-	render: { title: 'Rendering', file: 'glass-widgets.mp4', detail: '1080 × 1920 · 30 fps' },
+	count: { value: '21', label: 'effekt', sub: 'bir skill-də' },
+	profile: { name: 'Adınız', line: 'Vəzifəniz', barLabel: 'Üz izlənir', barValue: '100%' },
+	chart: { title: 'İnsan maskası', value: '1,714', unit: 'kadr' },
+	ring: { label: 'Səs uyğunlaşdı' },
+	render: { title: 'Render edilir', file: 'glass-widgets.mp4', detail: '1080 × 1920 · 30 fps' },
 }
 
 const GLASS: CSSProperties = {
@@ -119,6 +119,6 @@ export const GlassWidgets: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const glassWidgetsFx: FxEntry = { id: 'glass-widgets', name: 'Glass Widgets', duration: DURATION, Component: GlassWidgets,
+export const glassWidgetsFx: FxEntry = { id: 'glass-widgets', name: 'Şüşə vidjetlər', duration: DURATION, Component: GlassWidgets,
 	sfx: [{ at: 2, sound: 'cascade', volume: 0.35 }, { at: 50, sound: 'chime', volume: 0.35 }],
 }

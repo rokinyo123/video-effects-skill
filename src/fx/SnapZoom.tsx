@@ -34,6 +34,6 @@ export const SnapZoom: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const snapZoomFx: FxEntry = { id: 'snap-zoom', name: 'Snap Zoom', duration: DURATION, Component: SnapZoom,
+export const snapZoomFx: FxEntry = { id: 'snap-zoom', name: 'Kəskin zoom', duration: DURATION, Component: SnapZoom,
 	sfx: [{ at: 10, sound: 'whip', volume: 0.35 }, { at: 12, sound: 'hit', volume: 0.3 }],
 }

@@ -62,6 +62,6 @@ export const ZoomPortal: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const zoomPortalFx: FxEntry = { id: 'zoom-portal', name: 'Zoom Portal', duration: 66, Component: ZoomPortal,
+export const zoomPortalFx: FxEntry = { id: 'zoom-portal', name: 'Zoom portalı', duration: 66, Component: ZoomPortal,
 	sfx: [{ at: 4, sound: 'bubble', volume: 0.4 }, { at: 34, sound: 'whoosh', volume: 0.4 }],
 }

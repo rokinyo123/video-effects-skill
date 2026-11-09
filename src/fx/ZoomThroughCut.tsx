@@ -100,6 +100,6 @@ export const ZoomThroughCut: FC<FxProps> = ({ from }) => {
 	)
 }
 
-export const zoomThroughCutFx: FxEntry = { id: 'zoom-through-cut', name: 'Zoom Through Cut', duration: DUR, Component: ZoomThroughCut,
+export const zoomThroughCutFx: FxEntry = { id: 'zoom-through-cut', name: 'Zoom ilə kəsik', duration: DUR, Component: ZoomThroughCut,
 	sfx: [{ at: 10, sound: 'whip', volume: 0.35 }],
 }

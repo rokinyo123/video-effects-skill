@@ -79,6 +79,6 @@ export const PaperCutout: FC<FxProps> = ({ from }) => {
 	)
 }
 
-export const paperCutoutFx: FxEntry = { id: 'paper-cutout', name: 'Paper Cutout', duration: 75, Component: PaperCutout,
+export const paperCutoutFx: FxEntry = { id: 'paper-cutout', name: 'Kağız stiker', duration: 75, Component: PaperCutout,
 	sfx: [{ at: 2, sound: 'stamp', volume: 0.35 }],
 }

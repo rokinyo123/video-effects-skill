@@ -80,6 +80,6 @@ export const DigitalZoom: FC<FxProps> = ({ from }) => {
 	</div>
 }
 
-export const digitalZoomFx: FxEntry = { id: 'digital-zoom', name: 'Digital Zoom', duration: 66, Component: DigitalZoom,
+export const digitalZoomFx: FxEntry = { id: 'digital-zoom', name: 'Rəqəmsal zoom', duration: 66, Component: DigitalZoom,
 	sfx: [10, 28, 48].map(at => ({ at, sound: 'click' as const, volume: 0.4 })),
 }

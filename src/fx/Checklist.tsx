@@ -12,13 +12,13 @@ import { pop, SPARKLE } from './theme'
 // row's label lights as it becomes the working step, and the check draws on 2 frames after its disc.
 // SFX: 'click' at 10, 21, 42, 53 (rows done), 'chime' at 64 (the last row).
 const DURATION = 90
-const TITLE = 'Claude is editing your clip'
+const TITLE = 'Claude klipinizi montaj edir'
 const ROWS = [
-	{ label: 'Found you in every frame', tag: '1,714 frames' },
-	{ label: 'Cut you out', tag: 'person mask' },
-	{ label: 'Wrote the effect in React', tag: 'Remotion' },
-	{ label: 'Timed sound to the motion', tag: 'sfx' },
-	{ label: 'Rendered to MP4', tag: '1080×1920' },
+	{ label: 'Hər kadrda sizi tapdı', tag: '1,714 kadr' },
+	{ label: 'Sizi kəsib çıxardı', tag: 'insan maskası' },
+	{ label: 'Effekti React-da yazdı', tag: 'Remotion' },
+	{ label: 'Səsi hərəkətə uyğunlaşdırdı', tag: 'sfx' },
+	{ label: 'MP4-ə render etdi', tag: '1080×1920' },
 ]
 const DONE = [10, 21, 42, 53, 64]
 const CARD = { x: 56, y: 1100, w: 968 }
@@ -77,6 +77,6 @@ export const Checklist: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const checklistFx: FxEntry = { id: 'checklist', name: 'Checklist', duration: DURATION, Component: Checklist,
+export const checklistFx: FxEntry = { id: 'checklist', name: 'Yoxlama siyahısı', duration: DURATION, Component: Checklist,
 	sfx: DONE.map((at, i) => ({ at, sound: i === DONE.length - 1 ? 'chime' as const : 'click' as const, volume: 0.4 })),
 }

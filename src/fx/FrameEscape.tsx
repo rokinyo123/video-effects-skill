@@ -47,6 +47,6 @@ export const FrameEscape: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const frameEscapeFx: FxEntry = { id: 'frame-escape', name: 'Frame Escape', duration: DURATION, Component: FrameEscape,
+export const frameEscapeFx: FxEntry = { id: 'frame-escape', name: 'Çərçivədən çıxış', duration: DURATION, Component: FrameEscape,
 	sfx: [{ at: 0, sound: 'whoosh', volume: 0.4 }, { at: 20, sound: 'reveal', volume: 0.4 }],
 }

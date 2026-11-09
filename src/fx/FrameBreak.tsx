@@ -108,6 +108,6 @@ export const FrameBreak: FC<FxProps> = ({ from }) => {
 	</div>
 }
 
-export const frameBreakFx: FxEntry = { id: 'frame-break', name: 'Frame Break', duration: 66, Component: FrameBreak,
+export const frameBreakFx: FxEntry = { id: 'frame-break', name: 'Çərçivə sınığı', duration: 66, Component: FrameBreak,
 	sfx: [{ at: 5, sound: 'crack', volume: 0.45 }, { at: 14, sound: 'shatter', volume: 0.45 }],
 }

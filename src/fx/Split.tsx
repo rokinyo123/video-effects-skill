@@ -16,17 +16,17 @@ const SEAM = FX_H / 2
 const HEADROOM = 200 // how far above the top of the face box the seam lands: the hair clears it with a little air
 const INK = '#1F1E1C'
 const PAPER = '#F4EEE3'
-const TITLE = 'Lines Claude wrote'
-const ACCENT = 'per effect'
+const TITLE = 'Kod sətirləri'
+const ACCENT = 'hər effektdə'
 const BARS = [ // line counts of GlassWidgets, BrollOverlay, Orbit, Checklist and Split.tsx when this effect was added
-	{ label: 'widgets', value: 124 },
+	{ label: 'vidjet', value: 124 },
 	{ label: 'b-roll', value: 109 },
 	{ label: 'orbit', value: 95 },
-	{ label: 'list', value: 82 },
-	{ label: 'split', value: 78 },
+	{ label: 'siyahı', value: 82 },
+	{ label: 'bölmə', value: 78 },
 ]
 const VALUE_SUFFIX = ''
-const AVG_LABEL = 'avg'
+const AVG_LABEL = 'orta'
 const PLOT = { x: 120, w: 840, base: 860, h: 420 }
 const BAR_W = 116
 
@@ -73,6 +73,6 @@ export const Split: FC<FxProps> = ({ from }) => {
 	</AbsoluteFill>
 }
 
-export const splitFx: FxEntry = { id: 'split', name: 'Split', duration: DURATION, Component: Split,
+export const splitFx: FxEntry = { id: 'split', name: 'Bölünmüş ekran', duration: DURATION, Component: Split,
 	sfx: [{ at: 4, sound: 'whoosh', volume: 0.35 }, { at: 20, sound: 'cascade', volume: 0.35 }, { at: 46, sound: 'click', volume: 0.4 }],
 }

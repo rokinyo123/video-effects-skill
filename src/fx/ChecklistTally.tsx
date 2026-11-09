@@ -11,9 +11,9 @@ import { Backdrop, GlassBlur, GlassCard, materialize, pop, colors, themeFonts } 
 // shrinking from about 5 frames to 2.
 // SFX: 'cascade' at 14 (ticks start), 'chime' at 80 (the last tick).
 export const EFFECT_NAMES = [
-	'Orbit', 'Chat Takeover', 'Frame Escape', 'Snap Zoom', 'Checklist Pop', 'Headline Storm', 'Zoom Portal', 'Growth Curve', 'B-roll Overlay',
-	'Paper Cutout', 'Magazine Cover', 'Liquid Glass', 'Zoom Through Cut', 'Green Screen', 'Frame Break', 'Digital Zoom', 'Phone Mockup', 'Checklist Tally',
-	'Glass Widgets', 'Checklist', 'Split',
+	'Orbit', 'Söhbət pəncərəsi', 'Çərçivədən çıxış', 'Kəskin zoom', 'Siyahı kapsulları', 'Başlıq fırtınası', 'Zoom portalı', 'Artım qrafiki', 'B-roll əlavəsi',
+	'Kağız stiker', 'Jurnal üz qabığı', 'Maye şüşə', 'Zoom ilə kəsik', 'Yaşıl ekran', 'Çərçivə sınığı', 'Rəqəmsal zoom', 'Telefon maketi', 'Siyahı yekunu',
+	'Şüşə vidjetlər', 'Yoxlama siyahısı', 'Bölünmüş ekran',
 ]
 const FIRST = 14
 const LAST = 80
@@ -53,9 +53,9 @@ export const ChecklistTally: FC<FxProps> = () => {
 		<div style={{ position: 'absolute', left: LEFT + 12, top: HEAD_TOP, width: WIDTH - 24, ...materialize(head) }}>
 			<div style={{ display: 'flex', alignItems: 'baseline', gap: 26 }}>
 				<div style={{ fontFamily: themeFonts.heading, fontWeight: 500, fontSize: 250, lineHeight: 0.9, letterSpacing: '-0.04em', fontVariantNumeric: 'tabular-nums', color: frame >= DONE ? colors.blue : colors.navy }}>{n}</div>
-				<div style={{ fontFamily: themeFonts.heading, fontWeight: 500, fontSize: 64, letterSpacing: '-0.02em', color: colors.navy500 }}>/ {EFFECT_NAMES.length} effects</div>
+				<div style={{ fontFamily: themeFonts.heading, fontWeight: 500, fontSize: 64, letterSpacing: '-0.02em', color: colors.navy500 }}>/ {EFFECT_NAMES.length} effekt</div>
 			</div>
-			<div style={{ fontFamily: fonts.ui, fontWeight: 500, fontSize: 40, letterSpacing: '-0.005em', color: colors.navy500, marginTop: 22 }}>Every one coded with Claude.</div>
+			<div style={{ fontFamily: fonts.ui, fontWeight: 500, fontSize: 40, letterSpacing: '-0.005em', color: colors.navy500, marginTop: 22 }}>Hamısı Claude ilə yazılıb.</div>
 			<div style={{ marginTop: 34, height: 14, borderRadius: 7, background: colors.navy200, overflow: 'hidden' }}>
 				<div style={{ width: `${fill * 100}%`, height: '100%', borderRadius: 7, background: colors.blue }} />
 			</div>
@@ -78,6 +78,6 @@ export const ChecklistTally: FC<FxProps> = () => {
 	</div></GlassBlur.Provider>
 }
 
-export const checklistTallyFx: FxEntry = { id: 'checklist-tally', name: 'Checklist Tally', duration: 120, Component: ChecklistTally,
+export const checklistTallyFx: FxEntry = { id: 'checklist-tally', name: 'Siyahı yekunu', duration: 120, Component: ChecklistTally,
 	sfx: [{ at: 14, sound: 'cascade', volume: 0.35 }, { at: 80, sound: 'chime', volume: 0.4 }],
 }

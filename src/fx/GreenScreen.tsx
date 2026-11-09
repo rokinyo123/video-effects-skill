@@ -58,6 +58,6 @@ export const GreenScreen: FC<FxProps> = ({ from }) => {
 	</div>
 }
 
-export const greenScreenFx: FxEntry = { id: 'green-screen', name: 'Green Screen', duration: 72, Component: GreenScreen,
+export const greenScreenFx: FxEntry = { id: 'green-screen', name: 'Yaşıl ekran', duration: 72, Component: GreenScreen,
 	sfx: [{ at: 4, sound: 'whoosh', volume: 0.4 }],
 }

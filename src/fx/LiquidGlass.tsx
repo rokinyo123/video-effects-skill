@@ -65,6 +65,6 @@ export const LiquidGlass: FC<FxProps> = ({ from }) => {
 	)
 }
 
-export const liquidGlassFx: FxEntry = { id: 'liquid-glass', name: 'Liquid Glass', duration: DUR, Component: LiquidGlass,
+export const liquidGlassFx: FxEntry = { id: 'liquid-glass', name: 'Maye şüşə', duration: DUR, Component: LiquidGlass,
 	sfx: [{ at: 0, sound: 'whoosh', volume: 0.35 }, { at: 48, sound: 'whoosh', volume: 0.3 }],
 }

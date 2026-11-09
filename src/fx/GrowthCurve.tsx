@@ -63,20 +63,20 @@ export const GrowthCurve: FC<FxProps> = ({ from }) => {
 		<AbsoluteFill style={{ opacity: 1 - fade }}><ARoll from={from} /></AbsoluteFill>
 		<Cutout from={from} />
 		{/* Axis caption, left, under the label pill. */}
-		<div style={{ position: 'absolute', left: 64, top: 300, ...materialize(label), fontFamily: themeFonts.body, fontWeight: 600, fontSize: 36, letterSpacing: '0', color: colors.navy500 }}>Reels shipped per week</div>
+		<div style={{ position: 'absolute', left: 64, top: 300, ...materialize(label), fontFamily: themeFonts.body, fontWeight: 600, fontSize: 36, letterSpacing: '0', color: colors.navy500 }}>Həftədə hazırlanan Reels</div>
 		{/* Counter: a glass card, top right, below the label pill. Grows from its right edge, where the line ends. */}
 		<GlassBlur.Provider value={false}>
 			<GlassCard style={{ position: 'absolute', right: 52, top: 250, ...materialize(card), transformOrigin: 'right center' }} innerStyle={{ padding: '22px 32px 24px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
 				<div style={{ fontFamily: themeFonts.heading, fontSize: 132, lineHeight: 0.9, letterSpacing: '-0.03em', color: colors.navy, fontVariantNumeric: 'tabular-nums' }}>{shown}×</div>
-				<div style={{ fontFamily: themeFonts.body, fontWeight: 600, fontSize: 26, color: colors.navy500, marginTop: 10 }}>output</div>
+				<div style={{ fontFamily: themeFonts.body, fontWeight: 600, fontSize: 26, color: colors.navy500, marginTop: 10 }}>nəticə</div>
 				<div style={{ height: 52 * landed, marginTop: 14 * landed, overflow: 'hidden', opacity: landed }}>
-					<div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '10px 18px', borderRadius: 999, background: '#DCFCE7', color: green, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 26, transform: `scale(${0.9 + 0.1 * landed})`, transformOrigin: 'right center' }}>✓ With Claude</div>
+					<div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '10px 18px', borderRadius: 999, background: '#DCFCE7', color: green, fontFamily: themeFonts.body, fontWeight: 600, fontSize: 26, transform: `scale(${0.9 + 0.1 * landed})`, transformOrigin: 'right center' }}>✓ Claude ilə</div>
 				</div>
 			</GlassCard>
 		</GlassBlur.Provider>
 	</AbsoluteFill>
 }
 
-export const growthCurveFx: FxEntry = { id: 'growth-curve', name: 'Growth Curve', duration: 72, Component: GrowthCurve,
+export const growthCurveFx: FxEntry = { id: 'growth-curve', name: 'Artım qrafiki', duration: 72, Component: GrowthCurve,
 	sfx: [{ at: 0, sound: 'reveal', volume: 0.35 }, { at: 56, sound: 'chime', volume: 0.35 }],
 }
